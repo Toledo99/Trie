@@ -81,9 +81,9 @@ public class Trie<T> {
     
     private boolean eliminar(String llave){
         boolean res=false, ban;
-        NodoTrie act=buscaFin(llave);
         ban=busca(llave);
         if(ban && llave!=null && llave.compareTo("")!=0){
+            NodoTrie act=buscaFin(llave);
             act.setFin(false);
             ban=act.estaVacio();
             res=!ban;
